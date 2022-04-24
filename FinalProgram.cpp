@@ -2,7 +2,7 @@
 // Program Name: 12Filters For Image Manuplation.cpp
 // Last Modification Date: 24/4/2022
 // Author1 and ID and Group: FadyKamal 20210282
-// Author2 and ID and Group: xxxxx xxxxx
+// Author2 and ID and Group: Abanoub Gerges 20210001
 // Author3 and ID and Group: xxxxx xxxxx
 // Teaching Assistant: xxxxx xxxxx
 // Purpose:..........
