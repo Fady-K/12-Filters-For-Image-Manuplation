@@ -1,3 +1,12 @@
+// FCI – Programming 1 – 2022 - Assignment 3
+// Program Name: 12Filters For Image Manuplation.cpp
+// Last Modification Date: 24/4/2022
+// Author1 and ID and Group: FadyKamal 20210282
+// Author2 and ID and Group: xxxxx xxxxx
+// Author3 and ID and Group: xxxxx xxxxx
+// Teaching Assistant: xxxxx xxxxx
+// Purpose:..........
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -84,15 +93,15 @@ int main()
         {
             shrink();
         }
-        else if (choice == 10) 
+        else if (choice == 10)
         {
             mirror();
         }
-        else if (choice == 11) 
+        else if (choice == 11)
         {
             shuffleImage();
         }
-        else if (choice == 12) 
+        else if (choice == 12)
         {
             blur();
         }
@@ -251,7 +260,7 @@ void RotateAll()
     int angle;
     cin >> ws >> angle;
 
-        // check the rotation angle
+    // check the rotation angle
     if (angle == 90)
     {
         load_image(false);
@@ -698,85 +707,71 @@ void blur()
 //______________
 void Rmirror()
 {
-    for(int row = 0; row < SIZE  ; row++)
+    for (int row = 0; row < SIZE; row++)
     {
-        for (int col = 0; col < SIZE/2 ; col++)
+        for (int col = 0; col < SIZE / 2; col++)
         {
-            image[row][(SIZE/2)-col] = image[row][(SIZE/2)+col];
-        }   
+            image[row][(SIZE / 2) - col] = image[row][(SIZE / 2) + col];
+        }
     }
 }
-
-
-
 
 void Lmirror()
 {
-    for(int row = 0; row < SIZE  ; row++)
+    for (int row = 0; row < SIZE; row++)
     {
-        for (int col = 0; col < SIZE/2 ; col++)
+        for (int col = 0; col < SIZE / 2; col++)
         {
-            image[row][(SIZE/2)+col] = image[row][(SIZE/2)-col];
+            image[row][(SIZE / 2) + col] = image[row][(SIZE / 2) - col];
         }
     }
-
-
 }
 
-void Umirror(){
-for(int row = 0; row < SIZE/2  ; row++)
+void Umirror()
 {
-    for (int col = 0; col < SIZE ; col++)
+    for (int row = 0; row < SIZE / 2; row++)
     {
-        image[(SIZE/2)+row][col] = image[(SIZE/2)-row][col];
+        for (int col = 0; col < SIZE; col++)
+        {
+            image[(SIZE / 2) + row][col] = image[(SIZE / 2) - row][col];
+        }
     }
-}
-
-
 }
 void LOmirror()
 {
-    for(int row = 0; row < SIZE/2  ; row++)
+    for (int row = 0; row < SIZE / 2; row++)
     {
-        for (int col = 0; col < SIZE ; col++)
+        for (int col = 0; col < SIZE; col++)
         {
-            image[(SIZE/2)-row][col] = image[(SIZE/2)+row][col];
+            image[(SIZE / 2) - row][col] = image[(SIZE / 2) + row][col];
         }
     }
-
-
 }
 
 void mirror()
 {
     load_image(false);
     cout << "Mirror (l)eft, (r)ight, (u)pper, (d)own side?: ";
-    char dir; 
+    char dir;
     cin >> ws >> dir;
     if (dir == 'l')
     {
 
         Rmirror();
-
-
     }
     else if (dir == 'r')
     {
         Lmirror();
-
-
     }
     else if (dir == 'u')
     {
         Umirror();
-
-
     }
     else if (dir == 'd')
     {
         LOmirror();
     }
-    
+
     WriteImage(image);
 }
 
