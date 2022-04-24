@@ -3,8 +3,7 @@
 // Last Modification Date: 24/4/2022
 // Author1 and ID and Group: FadyKamal 20210282
 // Author2 and ID and Group: Abanoub Gerges 20210001
-// Author3 and ID and Group: xxxxx xxxxx
-// Teaching Assistant: xxxxx xxxxx
+// Author3 and ID and Group: Doha Tarek Farouk 20211057
 // Purpose:..........
 
 #include <iostream>
@@ -604,6 +603,7 @@ void Enlarge()
 //___________________
 void shrinkHalf()
 {
+     // make a white image to merge with the image we want to shrink
 
     for (int i = 0; i < (SIZE); i++)
     {
@@ -613,7 +613,8 @@ void shrinkHalf()
             image2[i][j] = 255;
         }
     }
-
+// Loop on every pixel in the image, divide its index value on 2
+// Make it equal to the average of the four pixels around it and itself
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -625,6 +626,7 @@ void shrinkHalf()
 
 void shrinkThird()
 {
+     // make a white image to merge with the image we want to shrink
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -632,7 +634,8 @@ void shrinkThird()
             image2[i][j] = 255;
         }
     }
-
+// Loop on every pixel in the image, divide its index value on 3
+// Make it equal to the average of the four pixels around it and itself
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -644,6 +647,7 @@ void shrinkThird()
 void shrinkFourth()
 {
 
+ // make a white image to merge with the image we want to shrink
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -651,7 +655,8 @@ void shrinkFourth()
             image2[i][j] = 255;
         }
     }
-
+// Loop on every pixel in the image, divide its index value on 4
+// Make it equal to the average of the four pixels around it and itself
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -664,6 +669,7 @@ void shrinkFourth()
 void shrink()
 {
     load_image(false);
+    // Ask user he want to shrink by ½ or 1/3 or ¼
     string option;
     cout << "Shrink to (1/2), (1/3) or (1/4)?  ";
     cin >> option;
