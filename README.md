@@ -1,1 +1,0 @@
-# 12-Filters-For-Image-Manuplation
