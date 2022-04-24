@@ -1,16 +1,15 @@
 // FCI – Programming 1 – 2022 - Assignment 3
 // Program Name: 12Filters For Image Manuplation.cpp
 // Last Modification Date: 24/4/2022
-// Author1 and ID and Group: FadyKamal 20210282
-// Author2 and ID and Group: Abanoub Gerges 20210001
-// Author3 and ID and Group: Doha Tarek Farouk 20211057
-// Purpose:..........
+// Author1 and ID and Group: FadyKamal 20210282 B
+// Author2 and ID and Group: Abanoub Gerges 20210001 B
+// Author3 and ID and Group: Doha Tarek Farouk 20211057 B
+// Purpose: To Manipulate Grayscale Bitmap Images
 
 #include <iostream>
 #include <string>
 #include <algorithm>
 #include "bmplib.cpp"
-#include <limits>
 
 unsigned char image[SIZE][SIZE];
 unsigned char image2[SIZE][SIZE];
@@ -603,7 +602,7 @@ void Enlarge()
 //___________________
 void shrinkHalf()
 {
-     // make a white image to merge with the image we want to shrink
+    // make a white image to merge with the image we want to shrink
 
     for (int i = 0; i < (SIZE); i++)
     {
@@ -613,8 +612,8 @@ void shrinkHalf()
             image2[i][j] = 255;
         }
     }
-// Loop on every pixel in the image, divide its index value on 2
-// Make it equal to the average of the four pixels around it and itself
+    // Loop on every pixel in the image, divide its index value on 2
+    // Make it equal to the average of the four pixels around it and itself
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -626,7 +625,7 @@ void shrinkHalf()
 
 void shrinkThird()
 {
-     // make a white image to merge with the image we want to shrink
+    // make a white image to merge with the image we want to shrink
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -634,8 +633,8 @@ void shrinkThird()
             image2[i][j] = 255;
         }
     }
-// Loop on every pixel in the image, divide its index value on 3
-// Make it equal to the average of the four pixels around it and itself
+    // Loop on every pixel in the image, divide its index value on 3
+    // Make it equal to the average of the four pixels around it and itself
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -647,7 +646,7 @@ void shrinkThird()
 void shrinkFourth()
 {
 
- // make a white image to merge with the image we want to shrink
+    // make a white image to merge with the image we want to shrink
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
@@ -655,8 +654,8 @@ void shrinkFourth()
             image2[i][j] = 255;
         }
     }
-// Loop on every pixel in the image, divide its index value on 4
-// Make it equal to the average of the four pixels around it and itself
+    // Loop on every pixel in the image, divide its index value on 4
+    // Make it equal to the average of the four pixels around it and itself
     for (int i = 0; i < (SIZE); i++)
     {
         for (int j = 0; j < (SIZE); j++)
